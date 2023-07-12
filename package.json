@@ -2,25 +2,29 @@
   "name": "housekeeping-telegram-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "dev": "nodemon index.js",
-    "start": "node dist/index.js"
+    "build": "tsc -p .",
+    "dev": "NODE_OPTIONS='--inspect' nodemon --watch src --ext .ts --exec 'npm run build && node dist/index.js'",
+    "demo": "nodemon --watch src --ext .ts --exec 'npm run build && node dist/demo.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node-schedule": "^2.1.0",
     "@types/node-telegram-bot-api": "^0.61.6",
     "@types/nodemon": "^1.19.2",
     "dotenv": "^16.3.1",
+    "node-schedule": "^2.1.1",
     "node-telegram-bot-api": "^0.61.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "poll": "^3.2.2"
   },
   "devDependencies": {
     "@types/node": "^20.3.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
   }
 }
