@@ -6,4 +6,4 @@
 
 TODO:
 
-1. Provision Firestore using Terrafrom to create data resources.
+1. Provision Firestore using Terrafrom to create data resources https://www.youtube.com/watch?v=32SKh-jGXI4
